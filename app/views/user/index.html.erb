@@ -1,1 +1,18 @@
-<div id="heading">There are <%= @user.length %> users in here</div>
+<div id="heading">There are <%= @users.length %> users in here</div>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Hobby</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td>
+      <% user.hobbies.each do |h| %>
+        <%= h.hobby %>,
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
