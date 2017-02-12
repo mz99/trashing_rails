@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'user#index'
 
-  resources :users 
+  get '/pictures' => 'pictures#index'
+  resources :users
 end
